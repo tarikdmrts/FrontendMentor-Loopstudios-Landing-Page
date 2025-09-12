@@ -1,0 +1,22 @@
+@use 'globals/boilerplate';
+@use 'globals/typography';
+@use 'globals/variables';
+@use 'globals/mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+html{
+    @include respond(md) {
+        font-size: 1.5rem;
+    }
+
+    @include respond(sm) {
+        font-size: 1rem;
+    }
+}

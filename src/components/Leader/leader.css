@@ -1,0 +1,29 @@
+.leader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+.leader__description {
+  padding: 2rem 1rem;
+}
+.leader__description h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: hsl(0, 0%, 0%);
+}
+.leader__description p {
+  font-size: 1rem;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 41%);
+  line-height: 1.5;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=leader.css.map */

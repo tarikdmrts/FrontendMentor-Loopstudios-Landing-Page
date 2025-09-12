@@ -1,0 +1,119 @@
+@use '../../styles/globals/variables' as *;
+@use '../../styles/globals/mixins' as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 1rem 0rem 1rem;
+
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    .navbar__header {
+        img {
+            width: 200px;
+            height: auto;
+            @include respond(lg){
+                width:300px;
+            }
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include respond(lg) {
+        margin: 4rem 1rem 0rem 1rem;
+        justify-content: space-around;
+    }
+}
+
+.navbar__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(lg) {
+        display: none;
+    }
+}
+
+.navbar__menu__overlay {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: rgba(0, 0, 0);
+    z-index: 10;
+    transition: all 1s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    font-family: $font-family-alt;
+    color: $color-white;
+
+    &.open {
+        right: 0;
+    }
+
+    .navbar__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 80vh;
+        gap: 2rem;
+        margin: 0 2rem;
+
+        li {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-accent-light;
+            }
+        }
+    }
+
+    .navbar__close {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 1rem;
+    }
+
+    @include respond(lg) {
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        font-family: $font-family;
+
+        .navbar__list {
+            flex-direction: row;
+            gap: 2rem;
+            height: auto;
+            margin: 0;
+
+            li {
+                text-transform: none;
+                font-size: 1rem;
+                @include respond(lg){
+                    font-size:1.1rem;
+                }
+                @include respond(xl){
+                    font-size:1.5rem;
+                }
+            }
+        }
+
+        .navbar__close {
+            display: none;
+        }
+    }
+}

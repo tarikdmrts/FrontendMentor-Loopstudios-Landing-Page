@@ -1,0 +1,56 @@
+@use '../../styles/globals/variables' as *;
+@use '../../styles/globals/mixins' as *;
+
+.footer {
+    @include flex-center(column, 1.5rem);
+    background-color: $color-dark;
+    width: 100%;
+    padding: 3rem 1rem;
+    color: $color-white;
+    text-align: center;
+
+    &__logo {
+        width: 150px;
+        height: auto;
+    }
+
+    &__list {
+        @include flex-center(column, 2rem);
+        gap: 1.5rem;
+
+        li {
+            list-style: none;
+            font-family: $font-family;
+            font-weight: $font-regular;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $color-accent-light;
+            }
+        }
+    }
+
+    &__socials {
+        @include flex-center(row, 1.5rem);
+        margin-bottom: 1rem;
+        gap: 1rem;
+
+        img {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__text {
+        font-family: $font-family;
+        font-weight: $font-regular;
+        font-size: 1rem;
+        color: $color-accent-light;
+    }
+}
