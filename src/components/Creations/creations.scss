@@ -103,6 +103,26 @@
             .grid {
                 width: 50%;
             }
+
+            &::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(255, 255, 255, 0);
+                transition: background 0.3s ease;
+            }
+
+            &:hover {
+                span {
+                    color: black;
+                }
+
+                cursor: pointer;
+
+                &::after {
+                    background: rgba(255, 255, 255, 0.5);
+                }
+            }
         }
 
         &__header {
@@ -135,9 +155,11 @@
     @include respond(xl) {
         &__item {
             width: 20%;
+
             &::after {
                 height: 99%;
             }
+
             &__header {
                 font-size: 3rem;
             }
@@ -145,10 +167,11 @@
 
         &__header {
             font-size: 3rem;
-            h2{
+
+            h2 {
                 font-size: 4rem;
             }
-            
+
         }
 
         &__button {

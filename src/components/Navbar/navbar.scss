@@ -74,9 +74,23 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             cursor: pointer;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 0;
+                top: 100%;
+                left: 25%;
+                height: 2px;
+                transition: all 0.3s ease-in-out;
+                background-color: $color-white;
+                margin-top: 0.5rem;
+            }
 
             &:hover {
-                color: $color-accent-light;
+                &::after{
+                    width: 50%;
+                }
             }
         }
     }

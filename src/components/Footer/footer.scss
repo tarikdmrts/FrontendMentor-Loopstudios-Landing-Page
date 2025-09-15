@@ -25,9 +25,24 @@
             font-size: 1rem;
             cursor: pointer;
             transition: color 0.3s ease;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0%;
+                top: 100%;
+                left: 25%;
+                height: 2px;
+                transition: all 0.3s ease-in-out;
+                background-color: $color-accent-light;
+                margin-top: 0.5rem;
+            }
 
             &:hover {
-                color: $color-accent-dark;
+                &::after {
+                    width: 50%;
+                }
             }
         }
     }
@@ -54,34 +69,38 @@
         color: $color-accent-dark;
     }
 
-    @include respond(lg){
+    @include respond(lg) {
         flex-direction: row;
         justify-content: space-between;
         padding: 1rem 1rem 0rem 1rem;
 
-        &__divider{
+        &__divider {
             display: flex;
             flex-direction: column;
             padding: 2rem;
             gap: 1rem;
-            .footer__list{
+
+            .footer__list {
                 flex-direction: row;
                 padding: 0;
             }
         }
-        &__bottom{
+
+        &__bottom {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             gap: 1rem;
             padding: 2rem;
         }
-        &__socials{
+
+        &__socials {
             margin: 0;
             padding: 0;
         }
     }
-    @include respond(xxl){
+
+    @include respond(xxl) {
         justify-content: space-around;
         column-gap: 30rem;
     }

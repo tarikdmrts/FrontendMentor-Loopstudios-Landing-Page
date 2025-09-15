@@ -20,8 +20,6 @@ Users should be able to:
 - Solution URL: (https://www.frontendmentor.io/solutions/loopstudios-landing-page-with-react-and-sass-bjY4Uu2if0)
 - Live Site URL:(https://frontend-mentor-loopstudios-landing-tau.vercel.app/)
 
-## My process
-
 ### Built with
 
 - Sass
