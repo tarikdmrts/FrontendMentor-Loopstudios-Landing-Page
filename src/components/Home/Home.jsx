@@ -1,5 +1,5 @@
 import Navbar from "../Navbar/Navbar";
-import './Home.scss';
+import './home.scss';
 
 export default function Home() {
   return (
