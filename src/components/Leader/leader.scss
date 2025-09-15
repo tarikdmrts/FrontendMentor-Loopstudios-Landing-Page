@@ -1,14 +1,16 @@
 @use '../../styles/globals/variables' as *;
 @use '../../styles/globals/mixins' as *;
 
-.leader{
-    @include flex-center(column,1.5rem);
+.leader {
+    @include flex-center(column, 1.5rem);
     height: 100vh;
     width: 100%;
     text-align: center;
-    &__description{
+
+    &__description {
         padding: 2rem 1rem;
-        h2{
+
+        h2 {
             font-family: $font-family-alt;
             font-weight: $font-regular;
             font-size: 2rem;
@@ -16,13 +18,105 @@
             margin-bottom: 1rem;
             color: $color-dark;
         }
-        p{
+
+        p {
             font-size: 1rem;
             font-family: $font-family;
             font-weight: $font-regular;
             color: $color-accent-dark;
             line-height: 1.5;
             letter-spacing: 1px;
+        }
+    }
+
+    @include respond(lg) {
+        &__image {
+            position: absolute;
+            top: 0%;
+            left: -10%;
+
+            img {
+                width: 760px;
+            }
+        }
+
+        &__content {
+            position: relative;
+            width: 80%;
+            height: 100vh;
+        }
+
+        &__description {
+            position: absolute;
+            right: -15%;
+            bottom: 0%;
+            background: white;
+            z-index: 2;
+            padding: 6rem 0rem 0rem 3rem;
+            text-align: left;
+
+            h2 {
+                font-size: 3rem;
+                max-width: 480px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                max-width: 480px;
+            }
+        }
+
+    }
+    @include respond(xl){
+        &__image {
+            top: 5%;
+            left: -5%;
+
+            img {
+                width: 860px;
+            }
+        }
+
+        &__description {
+            right: -10%;
+            bottom: 20%;
+            padding: 7rem 1rem 0rem 4rem;
+            h2 {
+                font-size: 3.5rem;
+                max-width: 560px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                max-width: 560px;
+            }
+        }
+    }
+
+    @include respond(xxl) {
+        &__image {
+            position: absolute;
+            top: 10%;
+            left: 0%;
+
+            img {
+                width: 940px;
+            }
+        }
+
+        &__description {
+            right: 0%;
+            bottom: 20%;
+            padding: 8rem 2rem 0rem 6rem;
+            h2 {
+                font-size: 4rem;
+                max-width: 640px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                max-width: 640px;
+            }
         }
     }
 }
